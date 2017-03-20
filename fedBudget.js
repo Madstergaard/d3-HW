@@ -13,7 +13,7 @@ var makeBars = function() {
 	.enter()
 	.append("div")
 	.style("width", function(d) {
-	    return d*50 + "px";
+	    return d*90 + "px";
 	})
 	.text( function(d) {
 	    return d;
@@ -25,7 +25,7 @@ var makeBars = function() {
 	.enter()
 	.append("div")
 	.style("width", function(d) {
-	    return d*50 + "px";
+	    return d*90 + "px"; 
 	})
 	.text( function(d) {
 	    return d;
