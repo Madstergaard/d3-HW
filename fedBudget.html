@@ -4,11 +4,12 @@
     <script src="d3-src/d3.min.js" charset="utf-8"></script>
     <title>D3 Federal Budget</title>
     <h1>D3 Federal Budget HW</h1>
+    <h2>Comparisons for 2014 and 2015 Fiscal Years</h2>
 
 
     <style>
       .chart div {
-      font: 25px sans-serif;
+      font: 20px sans-serif;
       background-color: steelblue;
       text-align: right;
       padding: 3px;
@@ -20,10 +21,21 @@
   </head>
 
   <body>
-    <h2>Chart of Federal Budget for 2014</h2>
-    <div class="chart" id="first"></div>
-    <h2>Chart of Federal Budget for 2015</h2>
-    <div class="chart" id="second"></div>
+    <h1>Total Revenue</h1>
+    <div class="chart" id="tR"></div>
+    <br>
+    
+    <h1>Total Spending</h1>
+    <div class="chart" id="tS"></div>
+    <br>
+    
+    <h1>GDP</h1>
+    <div class="chart" id="GDP"></div>
+    <br>
+
+    <h1>Total Surplus</h1>
+    <div class="chart" id="tSurp"></div>
+    <br>
     
     <script src="fedBudget.js"></script>
   </body>

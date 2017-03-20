@@ -1,39 +1,66 @@
-var first = d3.select("#first");
-var second = d3.select("#second");
+var tR = d3.select("#tR");
+var tS = d3.select("#tS");
+var tSurp = d3.select('#tSurp');
+var GDP = d3.select('#GDP');
 
-//      [total revenue, total spending, total surplus, GDP]
-var info2014 = [2.79,3.23,.447,15.8];
-var info2015 = [2.96,3.36,.399,16.2];
 
+//[2014,2015]
+var infotR = [2.79,2.96];
+var infotS = [3.23,3.36];
+var infotSurp = [447,399];
+var infoGDP = [15.8,16.2];
 
 var makeBars = function() {
 
-    first.selectAll("div")
-	.data(info2014)
+    tR.selectAll("div")
+	.data(infotR)
 	.enter()
 	.append("div")
 	.style("width", function(d) {
 	    return d*90 + "px";
 	})
 	.text( function(d) {
-	    return d;
+	    return "$"+d+" trillion";
 	});
 
     
-    second.selectAll("div")
-	.data(info2015)
+    tS.selectAll("div")
+	.data(infotS)
 	.enter()
 	.append("div")
 	.style("width", function(d) {
-	    return d*90 + "px"; 
+	    return d*90 + "px";
 	})
 	.text( function(d) {
-	    return d;
+	    return "$"+d+" trillion";
 	});
+
+    tSurp.selectAll("div")
+	.data(infotSurp)
+	.enter()
+	.append("div")
+	.style("width", function(d) {
+	    return d + "px";
+	})
+	.text( function(d) {
+	    return "$"+d+" billion";
+	});
+
+    GDP.selectAll("div")
+	.data(infoGDP)
+	.enter()
+	.append("div")
+	.style("width", function(d) {
+	    return d*90 + "px";
+	})
+	.text( function(d) {
+	    return "$"+d+" trillion";
+	});
+
 };
 
 var transitionTest = function( scale ) {
-     dyn.selectAll("div")
+    dyn.selectAll("div")
 	 .data(info)
 	 .transition()
 	 .duration(2000)
